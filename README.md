@@ -1,8 +1,12 @@
 # mulan-lib
 
+JS Web 工具库
+
 ```bash
   $ npm install mulan-lib
 ```
+
+### 引用
 
 ```js
   import * as mulan from 'mulan-lib'
@@ -26,7 +30,7 @@
 CommonModule
 
 ```js
-  import { decode, encode, log, mask, parseJSON, stringifyJSON, parseLocName } from '@boluome/common-lib'
+  import { decode, encode, log, mask, parseJSON, stringifyJSON, parseLocName } from 'mulan-lib'
 
   //decode url
   decode(url)
@@ -51,13 +55,12 @@ CommonModule
   mask(0, -3, '123456789')  // => 123456***
   mask(5, -2, '123456789')  // => 12**56789
 
-
 ```
 
 Moment:
 
 ```js
-  import { moment, addDay, addHour, addMinute, addSecond, compose, week, duration } from '@boluome/common-lib'
+  import { moment, addInterval, compose, week, timeDuration } from 'mulan-lib'
   //默认当天
   moment('YYYY-MM-DD')()
 
@@ -76,10 +79,7 @@ Moment:
   const st = '2017-02-14 12:00'
   const et = '2017-02-16 13:09'
 
-  moment('HH:mm')(`${ moment('YYYY-MM-DD')() }${ '20:30' }`)
-
-
-  duration(moment('x')(st), moment('x')(et)) //返回 [ 2, 1, 9 ]
+  timeDuration(moment('x')(st), moment('x')(et)) //返回 [ 2, 1, 9 ]
 
   //格式化星期，默认：周*
   week()(moment('day')(d)) // => 周三
@@ -116,13 +116,13 @@ Moment:
     ...
   }
 
-  fetch('/order', postData).then(...)
+  send('/order', postData).then(...)
 ```
 
 Url:
 
 ```js
-  import { stringifyQuery, parseQuery, setServerUrl, api } from '@boluome/common-lib'
+  import { stringifyQuery, parseQuery, setServerUrl, api } from 'mulan-lib'
 
   //设置serverUrl，统一请求出口路径，需分环境配置
   setServerUrl('http://api.otosaas.com')
@@ -143,13 +143,14 @@ Url:
 Ajax:
 
 ```js
-  import { get, send } from '@boluome/common-lib'
+  import { get, send } from 'mulan-lib'
 
-  //Get方式
+  //get(url, data[, headers])
   get('/handler') // get -> http://xxx.com/handler
   get('/handler', { a: 1, b: 2 })  // get -> http://xxx.com/handler?a=1&b=2
+  get('/handler', { a: 1, b: 2 }, { Content-Type: 'xxx' })
 
-  //Send(url, data[, method][, headers])
+  //send(url, data[, method][, headers])
   send('/handler', { a: 1, b: 2 })
   send('/handler', { a: 1, b: 2 }, 'DELETE')
   send('/handler', { a: 1, b: 2 }, 'PUT', { Content-Type: 'xxx' })
@@ -159,7 +160,7 @@ Ajax:
   get('/handler')
   .then(reply => {
     const { code, data, message } = reply
-    console.log(...)
+    // ...
   })
   .catch(err => console.log(err))
 
@@ -168,7 +169,7 @@ Ajax:
 Storage:
 
 ```js
-  import { setStore, getStore, removeStore } from '@boluome/common-lib'
+  import { setStore, getStore, removeStore } from 'mulan-lib'
 
   //设置localStorage
   setStore('string', 'localStorage')
