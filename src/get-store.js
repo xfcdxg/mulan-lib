@@ -19,7 +19,6 @@ export default (
       }
       return r
     } catch(err) {
-      // console.log(err)
       return get(k, t)
     }
   }

@@ -1,12 +1,1 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (src, cb) {
-  var script = document.createElement('script');
-  script.src = src;
-  script.onload = cb;
-  document.body.appendChild(script);
-};
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=function(e,t){var o=document.createElement("script");o.src=e,o.onload=t,document.body.appendChild(o)};

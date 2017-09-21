@@ -1,9 +1,1 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (json) {
-  return JSON.stringify(json);
-};
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=function(e){return JSON.stringify(e)};

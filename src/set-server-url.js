@@ -1,5 +1,5 @@
-window.OTO_SAAS = {}
+window.MULAN = {}
 // string -> string
 export default (
-  url => window.OTO_SAAS.SERVER_URL = url
+  url => window.MULAN.SERVER_URL = url
 )

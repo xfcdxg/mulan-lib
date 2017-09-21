@@ -1,16 +1,1 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _replace = require("ramda/src/replace");
-
-var _replace2 = _interopRequireDefault(_replace);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// string -> string
-exports.default = function (name) {
-  return (0, _replace2.default)(/省|市|区|县|特别行政区/g, "", name);
-};
+"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _replace=require("ramda/src/replace"),_replace2=_interopRequireDefault(_replace);exports.default=function(e){return(0,_replace2.default)(/省|市|区|县|特别行政区/g,"",e)};
