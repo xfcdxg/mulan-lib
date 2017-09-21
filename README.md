@@ -1,15 +1,10 @@
 # mulan-lib
 
+
 JS Web 工具库
 
 ```bash
   $ npm install mulan-lib
-```
-
-### 引用
-
-```js
-  import * as mulan from 'mulan-lib'
 ```
 
 ### commonJs
@@ -20,14 +15,20 @@ JS Web 工具库
   $ npm run build
 ```
 
-按需引用
+### 引用
+
+```js
+  import * as mulan from 'mulan-lib'
+```
+
+### 按需引用
 
 ```js
   //按需引用
   import { add, parseQuery, moment, send } from 'mulan-lib'
 ```
 
-CommonModule
+### CommonModule
 
 ```js
   import { decode, encode, log, mask, parseJSON, stringifyJSON, parseLocName } from 'mulan-lib'
@@ -57,7 +58,7 @@ CommonModule
 
 ```
 
-Moment:
+### Moment
 
 ```js
   import { moment, addInterval, compose, week, timeDuration } from 'mulan-lib'
@@ -119,7 +120,7 @@ Moment:
   send('/order', postData).then(...)
 ```
 
-Url:
+### Url
 
 ```js
   import { stringifyQuery, parseQuery, setServerUrl, api } from 'mulan-lib'
@@ -140,7 +141,7 @@ Url:
   stringifyQuery(params) // => ?a=1&b=2
 ```
 
-Ajax:
+### Ajax
 
 ```js
   import { get, send } from 'mulan-lib'
@@ -166,7 +167,7 @@ Ajax:
 
 ```
 
-Storage:
+### Storage
 
 ```js
   import { setStore, getStore, removeStore } from 'mulan-lib'
