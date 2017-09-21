@@ -1,7 +1,7 @@
 {
-  "name": "mulan",
+  "name": "mulan-lib",
   "version": "1.0.1",
-  "description": "mulan",
+  "description": "mulan-lib",
   "main": "index.js",
   "scripts": {
     "transform": "./node_modules/.bin/babel -d common/ src/",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xfcdxg/mulan.git"
+    "url": "git+https://github.com/xfcdxg/mulan-lib.git"
   },
   "author": "zhou",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xfcdxg/mulan/issues"
+    "url": "https://github.com/xfcdxg/mulan-lib/issues"
   },
-  "homepage": "https://github.com/xfcdxg/mulan#readme",
+  "homepage": "https://github.com/xfcdxg/mulan-lib#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-import": "^1.5.0",
@@ -25,7 +25,10 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-uglify": "^3.0.0",
     "mocha": "^3.5.3",
+    "pump": "^1.0.2",
     "ramda": "^0.24.1"
   }
 }
