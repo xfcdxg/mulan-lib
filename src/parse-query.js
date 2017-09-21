@@ -9,13 +9,12 @@ import {
   gte,
   indexOf,
   drop,
-  always
+  always,
 } from 'ramda'
 import decode from './decode'
 // querystring -> object
 export default (
-  s =>
-  compose(
+  s => compose(
     reduce((query, param, arr = compose(map(decode), split('='))(param)) =>
       assoc(head(arr), last(arr), query), {}),
     split('&'),

@@ -9,7 +9,7 @@ import {
   head,
   always,
   type,
-  clone
+  clone,
 } from 'ramda'
 
 import stringifyQuery from './stringify-query'
@@ -19,9 +19,9 @@ import api from './api'
 
 export default (
   (url, data, method = 'post', headers = {}) => {
-    if(compose(equals('Object'), type)(method)) {
+    if (compose(equals('Object'), type)(method)) {
       headers = method
-      method  = 'post'
+      method = 'post'
     }
 
     headers = compose(merge({ 'Content-Type': 'application/json' }, __), clone)(headers)

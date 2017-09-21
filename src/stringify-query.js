@@ -5,9 +5,9 @@ import encode from './encode'
 // object -> querystring
 export default (
   o => compose(
-         concat('?'),
-         join('&'),
-         values,
-         mapObjIndexed((value, key) => compose(join('='), map(encode))([key, value]) )
-       )(o)
+    concat('?'),
+    join('&'),
+    values,
+    mapObjIndexed((value, key) => compose(join('='), map(encode))([key, value]))
+  )(o)
 )

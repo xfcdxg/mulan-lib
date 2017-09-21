@@ -14,13 +14,7 @@ import {
   length,
   add,
   gte,
-  curry
 } from 'ramda'
-
-// string -> string -> [ string | number ]
-export default (
-  f => (s = null) => compose(format(f), create)(s)
-)
 
 // [ string | number ] -> Date
 const create = s =>
@@ -45,20 +39,8 @@ const create = s =>
       )(s)
     ))
   )(s)
-
-// string -> date -> [ string | number ]
-const format = f => d => {
-  switch (f) {
-    case 'x'   : return d.getTime()
-    case 'X'   : return divide(d.getTime(), 1000)
-    case 'day' : return d.getDay()
-    case 'date': return d.getDate()
-    default    : return stringify(f)(d)
-  }
-}
-
 // number -> [ number | string ]
-const zero = n => ifElse(gte(__, 10), always(n), always(`0${n}`))(n)
+const zero = n => ifElse(gte(__, 10), always(n), always(`0${ n }`))(n)
 
 // string -> string -> string
 const stringify = f => d => {
@@ -82,3 +64,18 @@ const stringify = f => d => {
     )
   )(f)
 }
+// string -> date -> [ string | number ]
+const format = f => d => {
+  switch (f) {
+    case 'x': return d.getTime()
+    case 'X': return divide(d.getTime(), 1000)
+    case 'day': return d.getDay()
+    case 'date': return d.getDate()
+    default: return stringify(f)(d)
+  }
+}
+
+// string -> string -> [ string | number ]
+export default (
+  f => (s = null) => compose(format(f), create)(s)
+)

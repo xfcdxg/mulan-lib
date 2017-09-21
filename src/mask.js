@@ -1,26 +1,26 @@
-import { curry, type, length, subtract } from 'ramda'
+import { curry, type, length, equals, subtract, lt } from 'ramda'
 
 export default (
   curry(
     (idx, len, str, code = '*') => {
-      if(equals('String', type(len))) {
+      if (equals('String', type(len))) {
         str = len
         len = 0
       }
-      //剩余长度
+      // 剩余长度
       const l = subtract(length(str), idx)
 
       len = len > l ? l : len
 
-      if(lt(len, 0)) {
+      if (lt(len, 0)) {
         const x = Math.abs(len)
-        len = 0 === idx ? x : idx < x ? idx : x
-        idx = 0 === idx ? length(str) - x : idx > x ? (idx - x - 1) : 0
+        len = idx === 0 ? x : idx < x ? idx : x
+        idx = idx === 0 ? length(str) - x : idx > x ? (idx - x - 1) : 0
       }
 
       const s = str.substr(0, idx)
-      const c = ((m = '', c = 0) => {
-        while(c++ < len) m += code
+      const c = ((m = '', x = 0) => {
+        while (x++ < len) m += code
         return m
       })()
       const e = str.substr(idx + len)
