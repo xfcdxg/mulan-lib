@@ -1,7 +1,9 @@
 # mulan-lib
 
-
 JS Web 工具库
+
+[![OSX Build][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
 
 ```bash
   $ npm install mulan-lib
@@ -191,3 +193,8 @@ JS Web 工具库
   removeStore('string')
   removeStore('string', 'session')
 ```
+
+[travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
+[travis-url]: https://travis-ci.org/xfcdxg/mulan-lib/
+[npm-image]:https://img.shields.io/badge/npm-v1.0.6-green.svg
+[npm-url]: https://www.npmjs.com/package/mulan-lib

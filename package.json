@@ -7,7 +7,8 @@
     "build": "gulp",
     "eslint": "gulp eslint",
     "test": "./node_modules/.bin/mocha --require babel-register --recursive",
-    "test_w": "./node_modules/.bin/mocha --require babel-register --recursive --watch"
+    "test_w": "./node_modules/.bin/mocha --require babel-register --recursive --watch",
+    "codecov": "node_modules/.bin/codecov -t 73c356fe-6254-4e9c-931a-dc4cf7a92a66"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "codecov": "^2.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.7.0",
