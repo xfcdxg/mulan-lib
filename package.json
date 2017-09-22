@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "eslint": "gulp eslint",
-    "test": "./node_modules/.bin/mocha --require babel-register --watch --recursive"
+    "test": "./node_modules/.bin/mocha --require babel-register --recursive",
+    "test_w": "./node_modules/.bin/mocha --require babel-register --recursive --watch"
   },
   "repository": {
     "type": "git",
