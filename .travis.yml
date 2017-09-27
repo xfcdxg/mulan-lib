@@ -1,3 +1,6 @@
+env:
+  global:
+    - CODECOV_TOKEN: 73c356fe-6254-4e9c-931a-dc4cf7a92a66
 language: node_js
 node_js:
   - "5"
@@ -6,7 +9,8 @@ node_js:
 install: npm install
 script:
   - npm run test
-  - npm run codecov
+  - istanbul cover node_modules/mocha/bin/_mocha
+  - cat ./coverage/coverage.json | node_modules/codecov.io/bin/codecov.io.js
 cache:
   directories: node_modules
 os:
