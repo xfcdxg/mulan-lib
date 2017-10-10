@@ -8,6 +8,7 @@ import {
   props,
   head,
   always,
+  identity,
   type,
   clone,
 } from 'ramda'
@@ -32,7 +33,7 @@ export default (
       always(
         ifElse(
           compose(equals('String'), type),
-          always(data),
+          identity,
           compose(always, stringifyJSON)(data)
         )(data)
       )

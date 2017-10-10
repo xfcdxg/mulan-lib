@@ -30,7 +30,6 @@ export removeStore from './remove-store'
 export mergeState from './merge-state'
 
 // moment
-
 export moment from './moment'
 export addInterval from './add-interval'
 export week from './week'

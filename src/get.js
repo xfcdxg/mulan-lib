@@ -4,7 +4,7 @@ import stringifyQuery from './stringify-query'
 export default (
   (url, data = {}, headers = {}) => (
     fetch(
-      api(`${ url }${ stringifyQuery(data) }`),
+      api(`${ url }${ data && stringifyQuery(data) }`),
       { headers }
     ).then(resp => resp.json())
   )

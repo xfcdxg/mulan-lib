@@ -77,11 +77,11 @@ JS Web 工具库
   // 格式化成时间戳
   moment('x')(d) // => 1487136727315
 
-  // 历时 [天，时，分] 默认为 0
-  const st = '2017-02-14 12:00'
-  const et = '2017-02-16 13:09'
+  // 历时 [天，时，分, 秒] 默认为 0
+  const st = '2017-02-14 12:00:00'
+  const et = '2017-02-16 13:09:30'
 
-  timeDuration(moment('x')(st), moment('x')(et)) // 返回 [ 2, 1, 9 ]
+  timeDuration(moment('x')(st), moment('x')(et)) // 返回 [ 2, 1, 9, 30 ]
 
   // 格式化星期，默认：周*
   week()(moment('day')(d))                 // => 周三
@@ -196,5 +196,5 @@ JS Web 工具库
 
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
 [travis-url]: https://travis-ci.org/xfcdxg/mulan-lib/
-[npm-image]:https://img.shields.io/badge/npm-v1.0.10-green.svg
+[npm-image]:https://img.shields.io/badge/npm-v1.0.11-green.svg
 [npm-url]: https://www.npmjs.com/package/mulan-lib

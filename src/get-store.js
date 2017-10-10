@@ -1,3 +1,4 @@
+import { type, equals, length, and, compose, lt, toString } from 'ramda'
 import parseJSON from './parse-j-s-o-n'
 import store     from './store'
 
@@ -9,7 +10,13 @@ export default (
   (k, t = 'local') => {
     try {
       const r = oget(k, t)
-      if (typeof r === 'number' && (`${ r }`).length > 0) {
+
+      if (
+        and(
+          compose(equals('Number'), type)(r),
+          compose(lt(0), length, toString)(r)
+        )
+      ) {
         return get(k, t)
       }
       return r

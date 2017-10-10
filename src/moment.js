@@ -10,6 +10,7 @@ import {
   type,
   replace,
   multiply,
+  identity,
   divide,
   length,
   add,
@@ -34,7 +35,7 @@ const create = s =>
             compose(equals(10), length, toString)
           ),
           multiply(1000),
-          always(s)
+          identity
         )
       )(s)
     ))
