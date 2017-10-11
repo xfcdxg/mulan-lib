@@ -7,7 +7,7 @@
     "build": "npm run eslint; gulp",
     "eslint": "gulp eslint",
     "test": "./node_modules/.bin/mocha --require babel-register --recursive",
-    "test-watch": "./node_modules/.bin/mocha --require babel-register --recursive --watch",
+    "test-watch": "./node_modules/.bin/mocha --require babel-register --recursive --watch"
   },
   "repository": {
     "type": "git",
