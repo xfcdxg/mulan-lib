@@ -1,6 +1,6 @@
 {
   "name": "mulan-lib",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "mulan-lib",
   "main": "./dist/index.js",
   "scripts": {
