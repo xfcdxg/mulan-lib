@@ -1,13 +1,13 @@
 {
   "name": "mulan-lib",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "mulan-lib",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "gulp",
+    "build": "npm run eslint; gulp",
     "eslint": "gulp eslint",
     "test": "./node_modules/.bin/mocha --require babel-register --recursive",
-    "test_w": "./node_modules/.bin/mocha --require babel-register --recursive --watch",
+    "test-watch": "./node_modules/.bin/mocha --require babel-register --recursive --watch",
     "codecov": "node_modules/.bin/codecov -t 73c356fe-6254-4e9c-931a-dc4cf7a92a66"
   },
   "repository": {

@@ -1,4 +1,4 @@
-import { curry, type, length, equals, subtract, lt } from 'ramda'
+import { curry, type, length, equals, subtract, lt, slice, add } from 'ramda'
 
 export default (
   curry(
@@ -18,12 +18,14 @@ export default (
         idx = idx === 0 ? length(str) - x : idx > x ? (idx - x - 1) : 0
       }
 
-      const s = str.substr(0, idx)
+      // const s = str.substr(0, idx)
+      const s = slice(0, idx, str)
       const c = ((m = '', x = 0) => {
         while (x++ < len) m += code
         return m
       })()
-      const e = str.substr(idx + len)
+      // const e = str.substr(idx + len)
+      const e = slice(add(idx, len), length(str), str)
 
       return `${ s }${ c }${ e }`
     }
