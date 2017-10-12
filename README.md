@@ -202,5 +202,5 @@ JS Web 工具库
 
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
 [travis-url]: https://travis-ci.org/xfcdxg/mulan-lib/
-[npm-image]:https://img.shields.io/badge/npm-v1.0.15-green.svg
+[npm-image]:https://img.shields.io/badge/npm-v1.0.16-green.svg
 [npm-url]: https://www.npmjs.com/package/mulan-lib
