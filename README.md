@@ -4,6 +4,7 @@ JS Web 工具库
 
 [![OSX Build][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
+[![codecov](https://codecov.io/gh/xfcdxg/mulan-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/xfcdxg/mulan-lib)
 
 ```bash
   $ npm install mulan-lib
