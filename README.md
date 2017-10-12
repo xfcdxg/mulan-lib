@@ -26,7 +26,7 @@ JS Web 工具库
 ### 按需引用
 
 ```js
-  import { add, parseQuery, moment, send } from 'mulan-lib'
+  import { send, moment, parseQuery } from 'mulan-lib'
 ```
 
 ### CommonModule
@@ -62,7 +62,8 @@ JS Web 工具库
 ### Moment
 
 ```js
-  import { moment, addInterval, compose, week, timeDuration } from 'mulan-lib'
+  import { moment, week, addInterval, timeDuration } from 'mulan-lib'
+  import { compose } from 'ramda'
   // 默认当天
   moment('YYYY-MM-DD')()
 
