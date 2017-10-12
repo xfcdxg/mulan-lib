@@ -1,10 +1,10 @@
 import { assert } from 'chai'
-import log from '../dist/log'
-import mergeState from '../dist/merge-state'
-import numToChinese from '../dist/num-to-chinese'
-import parseLocName from '../dist/parse-loc-name'
-import mask from '../dist/mask'
-import respType from '../dist/_/response-type'
+import log from '../src/log'
+import mergeState from '../src/merge-state'
+import numToChinese from '../src/num-to-chinese'
+import parseLocName from '../src/parse-loc-name'
+import mask from '../src/mask'
+import respType from '../src/_/response-type'
 
 describe('通用方法', () => {
 

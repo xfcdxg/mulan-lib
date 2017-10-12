@@ -1,7 +1,7 @@
 import { assert } from 'chai'
-import log from '../dist/log'
-import parseQuery from '../dist/parse-query'
-import stringifyQuery from '../dist/stringify-query'
+import log from '../src/log'
+import parseQuery from '../src/parse-query'
+import stringifyQuery from '../src/stringify-query'
 
 describe('URL', () => {
   describe('格式化url query', () => {

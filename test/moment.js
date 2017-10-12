@@ -1,10 +1,10 @@
 import { assert } from 'chai'
 
-import moment from '../dist/moment'
-import log from '../dist/log'
-import addInterval from '../dist/add-interval'
-import week from '../dist/week'
-import timeDuration from '../dist/time-duration'
+import moment from '../src/moment'
+import log from '../src/log'
+import addInterval from '../src/add-interval'
+import week from '../src/week'
+import timeDuration from '../src/time-duration'
 
 const ts = 1487136727315
 
