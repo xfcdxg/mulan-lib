@@ -15,20 +15,20 @@ import {
 
 import stringifyQuery from './stringify-query'
 import stringifyJSON  from './stringify-j-s-o-n'
-
+import respType from './_/response-type'
 import api from './api'
 
-export default (
-  (url, data, method = 'post', headers = {}) => {
-    if (compose(equals('Object'), type)(method)) {
-      headers = method
-      method = 'post'
-    }
+const CONTENT_TYPE = {
+  JSON: 'application/json',
+  FORM: 'application/x-www-form-urlencoded',
+}
 
-    headers = compose(merge({ 'Content-Type': 'application/json' }, __), clone)(headers)
+export default (
+  (url, data, { method = 'post', headers = {}, dataType = 'json' }) => {
+    headers = compose(merge({ 'Content-Type': CONTENT_TYPE.JSON }, __), clone)(headers)
 
     const body = ifElse(
-      compose(equals('application/x-www-form-urlencoded'), head, props(['Content-Type'])),
+      compose(equals(CONTENT_TYPE.FORM), head, props(['Content-Type'])),
       compose(always, replace('?', ''), stringifyQuery)(data),
       always(
         ifElse(
@@ -39,6 +39,6 @@ export default (
       )
     )(headers)
 
-    return fetch(api(url), { method, headers, body }).then(resp => resp.json())
+    return fetch(api(url), { method, headers, body }).then(resp => resp[respType(dataType)]())
   }
 )

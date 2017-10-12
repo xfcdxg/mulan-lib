@@ -19,6 +19,9 @@
     "url": "https://github.com/xfcdxg/mulan-lib/issues"
   },
   "homepage": "https://github.com/xfcdxg/mulan-lib#readme",
+  "dependencies": {
+    "ramda": "^0.24.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
@@ -37,7 +40,6 @@
     "gulp-eslint": "^4.0.0",
     "gulp-uglify": "^3.0.0",
     "mocha": "^3.5.3",
-    "pump": "^1.0.2",
-    "ramda": "^0.24.1"
+    "pump": "^1.0.2"
   }
 }

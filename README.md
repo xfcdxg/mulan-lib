@@ -21,9 +21,12 @@ JS Web 工具库
 
 ```js
   import * as mulan from 'mulan-lib'
+
+  mulan.moment('x')()  // => timestamp
 ```
 
 ### 按需引用
+推荐使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)
 
 ```js
   import { send, moment, parseQuery } from 'mulan-lib'
@@ -145,19 +148,21 @@ JS Web 工具库
 
 ### Ajax
 
+配合URL模块一起使用
+
 ```js
   import { get, send } from 'mulan-lib'
 
-  // get(url, data[, headers])
+  // get(url, data[, options])
   get('/handler')                  // get -> http://xxx.com/handler
   get('/handler', { a: 1, b: 2 })  // get -> http://xxx.com/handler?a=1&b=2
-  get('/handler', { a: 1, b: 2 }, { Content-Type: 'xxx' })
+  get('/handler', { a: 1, b: 2 }, { headers: { Content-Type: 'xxx' }, dataType: 'text' })
 
-  // send(url, data[, method][, headers])
+  // send(url, data[, options)
   send('/handler', { a: 1, b: 2 })
-  send('/handler', { a: 1, b: 2 }, 'DELETE')
-  send('/handler', { a: 1, b: 2 }, 'PUT', { Content-Type: 'xxx' })
-  send('/handler', { a: 1, b: 2 }, { Content-Type: 'xxx' })
+  send('/handler', { a: 1, b: 2 }, { method: 'DELETE' })
+  send('/handler', { a: 1, b: 2 }, { method: 'PUT', headers: { Content-Type: 'xxx' } })
+  send('/handler', { a: 1, b: 2 }, { headers: { Content-Type: 'xxx' }, dataType: 'json' })
 
   // 🌰
   get('/handler')

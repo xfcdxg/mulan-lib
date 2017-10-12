@@ -1,19 +1,17 @@
 // common
 export decode from './decode'
 export encode from './encode'
-export log from './log'
-export mask from './mask'
-
 export parseJSON from './parse-j-s-o-n'
 export stringifyJSON from './stringify-j-s-o-n'
+
+export log from './log'
+export mask from './mask'
 export parseLocName from './parse-loc-name'
 export appendJs from './append-js'
 
 // ajax
 export get from './get'
 export send from './send'
-export getText from './get-text'
-// export
 
 // url
 export api from './api'

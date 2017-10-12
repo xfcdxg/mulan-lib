@@ -11,8 +11,13 @@ const ts = 1487136727315
 describe('日期转化', () => {
 
   describe('格式化日期', () => {
+    it('should return a number', () => {
+      const r = moment('x')()
+      log('result: ', r)
+      assert.equal('number', typeof r)
+    })
     it('should return a string', () => {
-      const r   = (`${ moment('YYYY-MM-DD')() }${ ' 20:30' }`)
+      const r = moment('YYYY-MM-DD HH:mm:ss')(ts)
       log('result: ', r)
       assert.equal('string', typeof r)
     })

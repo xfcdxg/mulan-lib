@@ -3,9 +3,19 @@ import log from '../dist/log'
 import mergeState from '../dist/merge-state'
 import numToChinese from '../dist/num-to-chinese'
 import parseLocName from '../dist/parse-loc-name'
-import mask from '../src/mask'
+import mask from '../dist/mask'
+import respType from '../dist/_/response-type'
 
 describe('通用方法', () => {
+
+  describe('resp', () => {
+    it('should return a string', () => {
+      const r = respType('text')
+      log('result: ', r)
+      assert.equal('string', typeof r)
+    })
+  })
+
   describe('复制状态 (Redux)', () => {
     it('should return a boolean', () => {
       const state = {}

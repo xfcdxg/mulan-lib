@@ -4,7 +4,7 @@ import uglify from 'gulp-uglify'
 import eslint from 'gulp-eslint'
 import babel  from 'gulp-babel'
 
-const src  = gulp.src('src/*.js')
+const src  = gulp.src('src/**/*')
 const dist = gulp.dest('dist')
 
 gulp.task('default', ['build'])

@@ -1,1 +1,0 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _api=require("./api"),_api2=_interopRequireDefault(_api);exports.default=function(e){return fetch((0,_api2.default)(e)).then(function(e){return e.text()})};

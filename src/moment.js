@@ -41,7 +41,7 @@ const create = s =>
     ))
   )(s)
 // number -> [ number | string ]
-const zero = n => ifElse(gte(__, 10), always(n), always(`0${ n }`))(n)
+const zero = n => ifElse(gte(__, 10), identity, always(`0${ n }`))(n)
 
 // string -> string -> string
 const stringify = f => d => {
