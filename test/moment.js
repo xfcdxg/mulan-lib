@@ -6,7 +6,7 @@ import addInterval from '../src/add-interval'
 import week from '../src/week'
 import timeDuration from '../src/time-duration'
 
-const ts = 1487136727315
+const ts = 1508219850000
 
 describe('日期转化', () => {
 
@@ -25,9 +25,9 @@ describe('日期转化', () => {
 
   describe('添加时间', () => {
     it('添加一天', () => {
-      const r = moment('YYYY-MM-DD HH:mm:ss')(addInterval(1, 'd')(moment('YYYY-MM-DD HH:mm:ss')(ts)))
+      const r = moment('x')(addInterval(-2, 'd')(ts))
       log('result: ', r)
-      assert.equal('string', typeof r)
+      assert.equal('number', typeof r)
     })
 
     it('添加一小时', () => {
