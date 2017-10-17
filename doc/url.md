@@ -28,6 +28,7 @@
 
 ```js
   import { setServerUrl, api } from 'mulan-lib'
+  
   // 进入时设置，全局，无需多次调用，刷新页面需重新调用
   const serverUrl = 'http[s]://[server_url]'
   setServerUrl(serverUrl)               // -> web only

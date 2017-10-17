@@ -66,7 +66,6 @@ timeDuration(sts, ets) -> [days, hours, minutes, seconds]
   const et = '2017-10-16 13:09:30'
 
   timeDuration(moment('x')(st), moment('x')(et)) // -> [ 2, 1, 9, 30 ]
-  // 组合
 ```
 
 ### Week

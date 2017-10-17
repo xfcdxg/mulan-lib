@@ -5,7 +5,7 @@
 ```js
   import { log } from 'mulan-lib'
 
-  log('a', 'b', 'c', ...)  // => console.log('a', 'b', 'c', ...)
+  log('a', 'b', 'c', ...)  // -> console.log('a', 'b', 'c', ...)
 ```
 
 ### JSON
@@ -39,6 +39,6 @@ mask(index, length, string)
   parseLocName('上海市')         // -> 上海
   parseLocName('湖北省')         // -> 湖北
   parseLocName('虹口区')         // -> 虹口
-  parseLocName('西藏自治区')     // -> 西藏
+  parseLocName('西藏自治区')      // -> 西藏
   parseLocName('香港特别行政区')  // -> 香港
 ```

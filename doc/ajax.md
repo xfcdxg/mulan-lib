@@ -5,12 +5,11 @@
 
 ### Get
 
-get(url, data[, options])
+get(url [, data] [, options])
 
 ```js
   import { get, api } from 'mulan-lib'
 
-  // get(url, data[, options])
   get(api('/handler'))                  // get -> http[s]://[server_url]/handler
   get(api('/handler'), { a: 1, b: 2 })  // get -> http[s]://[server_url]/handler?a=1&b=2
 
