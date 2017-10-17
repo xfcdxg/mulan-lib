@@ -41,6 +41,10 @@ JS Web 工具库，基于 [Ramda][ramda]
 * [Ajax][ajax]
 * [Storage (web only)][storage]
 
+### Tips
+
+* v1.0.17后升级了ajax的传参方式
+
 [url]:./doc/url.md
 [ajax]:./doc/ajax.md
 [storage]:./doc/storage.md
@@ -50,5 +54,5 @@ JS Web 工具库，基于 [Ramda][ramda]
 [ramda]:https://github.com/ramda/ramda
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
 [travis-url]: https://travis-ci.org/xfcdxg/mulan-lib/
-[npm-image]:https://img.shields.io/badge/npm-v1.0.16-green.svg
+[npm-image]:https://img.shields.io/badge/npm-v1.0.17-green.svg
 [npm-url]: https://www.npmjs.com/package/mulan-lib
