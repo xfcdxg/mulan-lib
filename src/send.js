@@ -24,7 +24,7 @@ const CONTENT_TYPE = {
 }
 
 export default (
-  (url, data, { method = 'post', headers = {}, dataType = 'json' }) => {
+  (url, data, { method = 'post', headers = {}, dataType = 'json' } = {}) => {
     headers = compose(merge({ 'Content-Type': CONTENT_TYPE.JSON }, __), clone)(headers)
 
     const body = ifElse(
