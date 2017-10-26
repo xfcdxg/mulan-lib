@@ -10,8 +10,8 @@ get(url [, data] [, options])
 ```js
   import { get, api } from 'mulan-lib'
 
-  get(api('/handler'))                  // get -> http[s]://[server_url]/handler
-  get(api('/handler'), { a: 1, b: 2 })  // get -> http[s]://[server_url]/handler?a=1&b=2
+  get('/handler')                  // get -> http[s]://[server_url]/handler
+  get('/handler', { a: 1, b: 2 })  // get -> http[s]://[server_url]/handler?a=1&b=2
 
   const options = {
     headers:  { ... },
