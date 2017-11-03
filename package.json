@@ -3,6 +3,9 @@
   "version": "1.0.18",
   "description": "mulan-lib",
   "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run eslint; gulp",
     "eslint": "gulp eslint",
