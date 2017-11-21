@@ -52,7 +52,7 @@ describe('日期转化', () => {
   describe('获取星期', () => {
     it('should return a string', () => {
       const r = week()(moment('day')(ts))
-      log('result', r)
+      log('result: ', r)
       assert.equal('string', typeof r)
     })
   })
@@ -63,7 +63,7 @@ describe('日期转化', () => {
       const str2 = '2017-02-15 0:20:30'
       const stamp = moment('x')
       const r   = timeDuration(stamp(str1), stamp(str2))
-      log('result', r)
+      log('result: ', r)
       assert.equal('object', typeof r)
     })
   })

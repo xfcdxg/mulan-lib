@@ -1,1 +1,13 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=function(e,t){if("undefined"!=typeof document){var d=document.createElement("script");d.src=e,d.onload=t,document.body.appendChild(d)}};
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (src, cb) {
+  if (typeof document === 'undefined') return;
+  var script = document.createElement('script');
+  script.src = src;
+  script.onload = cb;
+  document.body.appendChild(script);
+};

@@ -1,1 +1,24 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _curry=require("ramda/src/curry"),_curry2=_interopRequireDefault(_curry),_store=require("./_/store"),_store2=_interopRequireDefault(_store),remove=(0,_curry2.default)(function(e,r){return _store2.default[r]().removeItem(e)});exports.default=function(e){var r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"local";return remove(e,r)};
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('ramda/src/curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+var _store = require('./_/store');
+
+var _store2 = _interopRequireDefault(_store);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var remove = (0, _curry2.default)(function (k, t) {
+  return _store2.default[t]().removeItem(k);
+});
+
+exports.default = function (k) {
+  var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'local';
+  return remove(k, t);
+};

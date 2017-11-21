@@ -1,1 +1,19 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _equals=require("ramda/src/equals"),_equals2=_interopRequireDefault(_equals),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};(0,_equals2.default)("undefined","undefined"==typeof window?"undefined":_typeof(window))&&(global.window={}),(0,_equals2.default)("undefined",_typeof(window.MULAN))&&(window.MULAN={}),exports.default=function(e){return window.MULAN.SERVER_URL=e};
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mockWindow = require('./_/mock-window');
+
+var _mockWindow2 = _interopRequireDefault(_mockWindow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var win = (0, _mockWindow2.default)({ MULAN: {} });
+
+// string -> string
+
+exports.default = function (url) {
+  return win.MULAN.SERVER_URL = url;
+};

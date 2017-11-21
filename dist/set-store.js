@@ -1,1 +1,50 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _equals=require("ramda/src/equals"),_equals2=_interopRequireDefault(_equals),_type=require("ramda/src/type"),_type2=_interopRequireDefault(_type),_compose=require("ramda/src/compose"),_compose2=_interopRequireDefault(_compose),_ifElse=require("ramda/src/ifElse"),_ifElse2=_interopRequireDefault(_ifElse),_curry=require("ramda/src/curry"),_curry2=_interopRequireDefault(_curry),_stringifyJSON=require("./stringify-j-s-o-n"),_stringifyJSON2=_interopRequireDefault(_stringifyJSON),_store=require("./_/store"),_store2=_interopRequireDefault(_store),set=(0,_curry2.default)(function(e,r,t){return _store2.default[r]().setItem(e,t)}),oset=(0,_curry2.default)(function(e,r,t){return set(e,r,(0,_stringifyJSON2.default)(t))});exports.default=function(e,r){var t=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"local";return(0,_ifElse2.default)((0,_compose2.default)((0,_equals2.default)("String"),_type2.default),set(e,t),oset(e,t))(r)};
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _equals = require('ramda/src/equals');
+
+var _equals2 = _interopRequireDefault(_equals);
+
+var _type = require('ramda/src/type');
+
+var _type2 = _interopRequireDefault(_type);
+
+var _compose = require('ramda/src/compose');
+
+var _compose2 = _interopRequireDefault(_compose);
+
+var _ifElse = require('ramda/src/ifElse');
+
+var _ifElse2 = _interopRequireDefault(_ifElse);
+
+var _curry = require('ramda/src/curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+var _stringifyJSON = require('./stringify-j-s-o-n');
+
+var _stringifyJSON2 = _interopRequireDefault(_stringifyJSON);
+
+var _store = require('./_/store');
+
+var _store2 = _interopRequireDefault(_store);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var set = (0, _curry2.default)(function (k, t, v) {
+  return _store2.default[t]().setItem(k, v);
+});
+
+var oset = (0, _curry2.default)(function (k, t, o) {
+  return set(k, t, (0, _stringifyJSON2.default)(o));
+});
+
+exports.default =
+// string -> string -> string | object -> empty
+function (k, v) {
+  var t = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'local';
+  return (0, _ifElse2.default)((0, _compose2.default)((0, _equals2.default)('String'), _type2.default), set(k, t), oset(k, t))(v);
+};

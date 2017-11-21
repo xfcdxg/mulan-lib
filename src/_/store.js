@@ -1,11 +1,14 @@
-import { or, equals } from 'ramda'
+import { equals } from 'ramda'
+import mockWindow from './mock-window'
+
+const win = mockWindow()
 
 const mockStorage = type => {
-  if (or(equals('undefined', typeof window), equals('undefined', typeof window[type]))) {
+  if (equals('undefined', typeof win[type])) {
     require('mock-local-storage')
-    return ((global && global.window) || window)[type]
+    return (global || win)[type]
   }
-  return window[type]
+  return win[type]
 }
 
 export default ({

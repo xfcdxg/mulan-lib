@@ -55,7 +55,7 @@
 [ramda]:https://github.com/ramda/ramda
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
 [travis-url]:https://travis-ci.org/xfcdxg/mulan-lib/
-[npm-image]:https://img.shields.io/badge/npm-v1.0.20-green.svg
+[npm-image]:https://img.shields.io/badge/npm-v1.0.21-green.svg
 [npm-url]:https://www.npmjs.com/package/mulan-lib
 [codecov-image]:https://codecov.io/gh/xfcdxg/mulan-lib/branch/master/graph/badge.svg
 [codecov-url]:https://codecov.io/gh/xfcdxg/mulan-lib

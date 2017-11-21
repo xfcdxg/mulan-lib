@@ -1,7 +1,7 @@
 import api from './api'
 import stringifyQuery from './stringify-query'
 import respType from './_/response-type'
-import fetch from './_/fetch'
+import fetch from './_/mock-fetch'
 
 export default (
   (url, data = {}, { headers = {}, dataType = 'json' } = {}) => (

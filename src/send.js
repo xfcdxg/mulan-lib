@@ -17,7 +17,7 @@ import stringifyQuery from './stringify-query'
 import stringifyJSON  from './stringify-j-s-o-n'
 import respType from './_/response-type'
 import api from './api'
-import fetch from './_/fetch'
+import fetch from './_/mock-fetch'
 
 const CONTENT_TYPE = {
   JSON: 'application/json',

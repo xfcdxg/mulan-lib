@@ -9,8 +9,7 @@ import setServerUrl from '../src/set-server-url'
 describe('URL', () => {
   describe('set server url', () => {
     it('should return string', () => {
-      setServerUrl('https://test.com/')
-      const r = window.MULAN.SERVER_URL
+      const r = setServerUrl('https://test.com/')
       log('result: ', r)
       assert.equal('string', typeof r)
     })

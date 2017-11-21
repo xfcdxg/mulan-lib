@@ -5,15 +5,15 @@ import {
   identity,
 } from 'ramda'
 
-if (typeof window === 'undefined') global.window = {}
+import mockWindow from './_/mock-window'
 
-if (typeof window.MULAN === 'undefined') window.MULAN = {}
+const win = mockWindow({ MULAN: {} })
 
 // string -> string
 export default (
   path => ifElse(
     test(/^(http|https)/),
     identity,
-    always(`${ window.MULAN.SERVER_URL || '' }${ path }`)
+    always(`${ win.MULAN.SERVER_URL || '' }${ path }`)
   )(path)
 )

@@ -1,1 +1,67 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _lt=require("ramda/src/lt"),_lt2=_interopRequireDefault(_lt),_toString=require("ramda/src/toString"),_toString2=_interopRequireDefault(_toString),_length=require("ramda/src/length"),_length2=_interopRequireDefault(_length),_equals=require("ramda/src/equals"),_equals2=_interopRequireDefault(_equals),_type=require("ramda/src/type"),_type2=_interopRequireDefault(_type),_compose=require("ramda/src/compose"),_compose2=_interopRequireDefault(_compose),_and=require("ramda/src/and"),_and2=_interopRequireDefault(_and),_parseJSON=require("./parse-j-s-o-n"),_parseJSON2=_interopRequireDefault(_parseJSON),_store=require("./_/store"),_store2=_interopRequireDefault(_store),get=function(e,t){return _store2.default[t]().getItem(e)},oget=function(e,t){return(0,_parseJSON2.default)(get(e,t))};exports.default=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"local";try{var r=oget(e,t);return(0,_and2.default)((0,_compose2.default)((0,_equals2.default)("Number"),_type2.default)(r),(0,_compose2.default)((0,_lt2.default)(0),_length2.default,_toString2.default)(r))?get(e,t):r}catch(r){return get(e,t)}};
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _lt = require('ramda/src/lt');
+
+var _lt2 = _interopRequireDefault(_lt);
+
+var _toString = require('ramda/src/toString');
+
+var _toString2 = _interopRequireDefault(_toString);
+
+var _length = require('ramda/src/length');
+
+var _length2 = _interopRequireDefault(_length);
+
+var _equals = require('ramda/src/equals');
+
+var _equals2 = _interopRequireDefault(_equals);
+
+var _type = require('ramda/src/type');
+
+var _type2 = _interopRequireDefault(_type);
+
+var _compose = require('ramda/src/compose');
+
+var _compose2 = _interopRequireDefault(_compose);
+
+var _and = require('ramda/src/and');
+
+var _and2 = _interopRequireDefault(_and);
+
+var _parseJSON = require('./parse-j-s-o-n');
+
+var _parseJSON2 = _interopRequireDefault(_parseJSON);
+
+var _store = require('./_/store');
+
+var _store2 = _interopRequireDefault(_store);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var get = function get(k, t) {
+  return _store2.default[t]().getItem(k);
+};
+var oget = function oget(k, t) {
+  return (0, _parseJSON2.default)(get(k, t));
+};
+
+exports.default =
+// string -> string -> string | object
+function (k) {
+  var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'local';
+
+  try {
+    var r = oget(k, t);
+
+    if ((0, _and2.default)((0, _compose2.default)((0, _equals2.default)('Number'), _type2.default)(r), (0, _compose2.default)((0, _lt2.default)(0), _length2.default, _toString2.default)(r))) {
+      return get(k, t);
+    }
+    return r;
+  } catch (err) {
+    return get(k, t);
+  }
+};

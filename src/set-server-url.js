@@ -1,10 +1,8 @@
-import { equals } from 'ramda'
+import mockWindow from './_/mock-window'
 
-if (equals('undefined', typeof window)) global.window = {}
-
-if (equals('undefined', typeof window.MULAN)) window.MULAN = {}
+const win = mockWindow({ MULAN: {} })
 
 // string -> string
 export default (
-  url => window.MULAN.SERVER_URL = url
+  url => win.MULAN.SERVER_URL = url
 )
