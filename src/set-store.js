@@ -6,9 +6,9 @@ import {
   type,
 } from 'ramda'
 import stringifyJSON from './stringify-j-s-o-n'
-import store from './store'
+import store from './_/store'
 
-const set = curry((k, t, v) => store[t].setItem(k, v))
+const set = curry((k, t, v) => store[t]().setItem(k, v))
 
 const oset = curry((k, t, o) => set(k, t, stringifyJSON(o)))
 

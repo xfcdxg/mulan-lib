@@ -5,6 +5,10 @@ import {
   identity,
 } from 'ramda'
 
+if (typeof window === 'undefined') global.window = {}
+
+if (typeof window.MULAN === 'undefined') window.MULAN = {}
+
 // string -> string
 export default (
   path => ifElse(

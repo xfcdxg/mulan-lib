@@ -8,7 +8,7 @@ import {
   always,
 } from 'ramda'
 
-import interval from './interval'
+import interval from './_/interval'
 
 export default (
   (st, et, r = []) => {

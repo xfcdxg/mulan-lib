@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=function(e,t){var o=document.createElement("script");o.src=e,o.onload=t,document.body.appendChild(o)};
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=function(e,t){if("undefined"!=typeof document){var d=document.createElement("script");d.src=e,d.onload=t,document.body.appendChild(d)}};

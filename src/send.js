@@ -17,6 +17,7 @@ import stringifyQuery from './stringify-query'
 import stringifyJSON  from './stringify-j-s-o-n'
 import respType from './_/response-type'
 import api from './api'
+import fetch from './_/fetch'
 
 const CONTENT_TYPE = {
   JSON: 'application/json',
@@ -39,6 +40,6 @@ export default (
       )
     )(headers)
 
-    return fetch(api(url), { method, headers, body }).then(resp => resp[respType(dataType)]())
+    return fetch()(api(url), { method, headers, body }).then(resp => resp[respType(dataType)]())
   }
 )

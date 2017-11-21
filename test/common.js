@@ -7,7 +7,6 @@ import mask from '../src/mask'
 import respType from '../src/_/response-type'
 
 describe('通用方法', () => {
-
   describe('resp', () => {
     it('should return a string', () => {
       const r = respType('text')

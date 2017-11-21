@@ -1,8 +1,8 @@
 import { type, equals, length, and, compose, lt, toString } from 'ramda'
 import parseJSON from './parse-j-s-o-n'
-import store     from './store'
+import store     from './_/store'
 
-const get = (k, t) => store[t].getItem(k)
+const get = (k, t) => store[t]().getItem(k)
 const oget = (k, t) => parseJSON(get(k, t))
 
 export default (
