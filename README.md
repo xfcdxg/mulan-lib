@@ -1,10 +1,10 @@
 # mulan-lib
 
-JS Web 工具库，基于 [Ramda][ramda]
+前端开发工具库，基于 [Ramda][ramda]，支持 SSR
 
 [![OSX Build][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
-[![codecov](https://codecov.io/gh/xfcdxg/mulan-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/xfcdxg/mulan-lib)
+[![codecov][codecov-image]](codecov-url)
 
 ### 安装
 ```bash
@@ -43,7 +43,8 @@ JS Web 工具库，基于 [Ramda][ramda]
 
 ### Tips
 
-* v1.0.17后升级了ajax的传参方式
+* v1.0.17 后升级了ajax的传参方式
+* v1.0.20 支持 SSR
 
 [url]:./doc/url.md
 [ajax]:./doc/ajax.md
@@ -53,6 +54,8 @@ JS Web 工具库，基于 [Ramda][ramda]
 [import]:https://github.com/ant-design/babel-plugin-import
 [ramda]:https://github.com/ramda/ramda
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
-[travis-url]: https://travis-ci.org/xfcdxg/mulan-lib/
+[travis-url]:https://travis-ci.org/xfcdxg/mulan-lib/
 [npm-image]:https://img.shields.io/badge/npm-v1.0.20-green.svg
-[npm-url]: https://www.npmjs.com/package/mulan-lib
+[npm-url]:https://www.npmjs.com/package/mulan-lib
+[codecov-image]:https://codecov.io/gh/xfcdxg/mulan-lib/branch/master/graph/badge.svg
+[codecov-url]:https://codecov.io/gh/xfcdxg/mulan-lib
