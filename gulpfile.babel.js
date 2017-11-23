@@ -5,7 +5,7 @@ import eslint from 'gulp-eslint'
 import babel  from 'gulp-babel'
 
 const src  = gulp.src('src/**/*')
-const dist = gulp.dest('dist')
+const dist = gulp.dest('lib')
 
 gulp.task('default', ['build'])
 

@@ -2,9 +2,9 @@
   "name": "mulan-lib",
   "version": "1.0.22",
   "description": "mulan-lib",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "npm run eslint; gulp",

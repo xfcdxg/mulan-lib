@@ -1,1 +1,0 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var _multiply=require("ramda/src/multiply"),_multiply2=_interopRequireDefault(_multiply);exports.default=function(e){var t=(0,_multiply2.default)(1e3,60),u=(0,_multiply2.default)(t,60);return{s:1e3,m:t,h:u,d:(0,_multiply2.default)(u,24)}[e]};
