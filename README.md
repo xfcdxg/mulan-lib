@@ -46,11 +46,11 @@
 * v1.0.17 后升级了ajax的传参方式
 * v1.0.20 支持 SSR
 
-[url]:./doc/url.md
-[ajax]:./doc/ajax.md
-[storage]:./doc/storage.md
-[moment]:./doc/moment.md
-[common]:./doc/common.md
+[url]:./docs/url.md
+[ajax]:./docs/ajax.md
+[storage]:./docs/storage.md
+[moment]:./docs/moment.md
+[common]:./docs/common.md
 [import]:https://github.com/ant-design/babel-plugin-import
 [ramda]:https://github.com/ramda/ramda
 [travis-image]: https://api.travis-ci.org/xfcdxg/mulan-lib.svg
