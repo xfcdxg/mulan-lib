@@ -5,6 +5,7 @@ export default (
     if (equals('undefined', typeof encodeURIComponent)) {
       return require('querystring').escape(s)
     }
+
     return encodeURIComponent(s)
   }
 )

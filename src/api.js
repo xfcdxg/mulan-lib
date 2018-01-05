@@ -5,7 +5,7 @@ import {
   identity,
 } from 'ramda'
 
-import mockWindow from './_/mock-window'
+import mockWindow from 'mock-window'
 
 const win = mockWindow({ MULAN: {} })
 

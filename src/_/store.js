@@ -1,5 +1,5 @@
 import { equals } from 'ramda'
-import mockWindow from './mock-window'
+import mockWindow from 'mock-window'
 
 const win = mockWindow()
 
