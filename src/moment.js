@@ -61,7 +61,10 @@ const stringify = f => d => {
       replace('DD', zero(day)),
       replace('HH', zero(hour)),
       replace('mm', zero(minute)),
-      replace('ss', zero(second))
+      replace('ss', zero(second)),
+      replace('Hi', hour),
+      replace('mi', minute),
+      replace('si', second)
     )
   )(f)
 }

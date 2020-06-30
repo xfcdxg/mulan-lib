@@ -17,7 +17,12 @@ describe('日期转化', () => {
       assert.equal('number', typeof r)
     })
     it('should return a string', () => {
-      const r = moment('YYYY-MM-DD HH:mm:ss')(ts)
+      const r = moment('YYYY-MM-DD HH:mm:ss')('2019/02/03 9:1:2')
+      log('result: ', r)
+      assert.equal('string', typeof r)
+    })
+    it('should return a string', () => {
+      const r = moment('YYYY-MM-DD Hi:mi:si')('2019/02/03 9:1:2')
       log('result: ', r)
       assert.equal('string', typeof r)
     })
